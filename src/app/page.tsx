@@ -1,13 +1,12 @@
-import { CheckIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="relative w-screen h-screen">
+    <div className="relative w-screen h-screen bg-yellow-500">
       <Image
         alt="background"
-        src="/background2.0.png"
+        src="/background.png"
         layout="fill"
         objectFit="cover"
         quality={100}
@@ -16,7 +15,7 @@ export default function Home() {
         <div className="w-screen md:w-[800px]">
           <Image
             alt="header logo"
-            src="/header.png"
+            src="/header2.0.png"
             layout="responsive"
             width={1500}
             height={200}
