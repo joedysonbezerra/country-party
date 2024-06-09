@@ -79,7 +79,7 @@ export default function Registration() {
                       name="firstName"
                       id="first-name"
                       autoComplete="given-name"
-                      className="pl-3 block w-full rounded-md bg-white py-1.5 text-gray-800 shadow-sm ring-1 ring-gray-300 focus:ring-2 focus:ring-indigo-500 sm:text-sm sm:leading-6"
+                      className="pl-3 block w-full rounded-md bg-white py-1.5 text-gray-800 shadow-sm border border-gray-400 focus:ring-2 focus:ring-indigo-500 sm:text-sm sm:leading-6"
                       value={formData.firstName}
                       onChange={handleChange}
                     />
@@ -99,7 +99,7 @@ export default function Registration() {
                       name="lastName"
                       id="last-name"
                       autoComplete="family-name"
-                      className="pl-3 block w-full rounded-md bg-white py-1.5 text-gray-800 shadow-sm ring-1 ring-gray-300 focus:ring-2 focus:ring-indigo-500 sm:text-sm sm:leading-6"
+                      className="pl-3 block w-full rounded-md bg-white py-1.5 text-gray-800 shadow-sm border border-gray-400 focus:ring-2 focus:ring-indigo-500 sm:text-sm sm:leading-6"
                       value={formData.lastName}
                       onChange={handleChange}
                     />
@@ -119,7 +119,7 @@ export default function Registration() {
                       type="text"
                       name="phone"
                       id="phone"
-                      className="pl-3 block w-full rounded-md bg-white py-1.5 text-gray-800 shadow-sm ring-1 ring-gray-300 focus:ring-2 focus:ring-indigo-500 sm:text-sm sm:leading-6"
+                      className="pl-3 block w-full rounded-md bg-white py-1.5 text-gray-800 shadow-sm border border-gray-400 focus:ring-2 focus:ring-indigo-500 sm:text-sm sm:leading-6"
                       value={formData.phone}
                       onChange={handleChange}
                     />
@@ -138,7 +138,7 @@ export default function Registration() {
                       type="number"
                       name="age"
                       id="age"
-                      className="pl-3 block w-full rounded-md bg-white py-1.5 text-gray-800 shadow-sm ring-1 ring-gray-300 focus:ring-2 focus:ring-indigo-500 sm:text-sm sm:leading-6"
+                      className="pl-3 block w-full rounded-md bg-white py-1.5 text-gray-800 shadow-sm border border-gray-400 focus:ring-2 focus:ring-indigo-500 sm:text-sm sm:leading-6"
                       value={formData.age}
                       onChange={handleChange}
                     />
