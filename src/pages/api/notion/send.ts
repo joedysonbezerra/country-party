@@ -1,11 +1,31 @@
 // pages/api/submit.js
 import { Client } from "@notionhq/client";
+import { CreatePageResponse } from "@notionhq/client/build/src/api-endpoints";
 
 const notion = new Client({
   auth: "secret_3ML9hf0HLMKHtYdpyF9RFEvHosghzJpy8H3QJsHjpkh",
 });
 
-export default async function handler(req, res) {
+export default async function handler(
+  req: {
+    method: string;
+    body: { firstName: any; lastName: any; phone: any; age: any };
+  },
+  res: {
+    status: (arg0: number) => {
+      (): any;
+      new (): any;
+      json: {
+        (arg0: {
+          message: string;
+          response?: CreatePageResponse;
+          error?: unknown;
+        }): void;
+        new (): any;
+      };
+    };
+  }
+) {
   if (req.method === "POST") {
     const { firstName, lastName, phone, age } = req.body;
     try {
