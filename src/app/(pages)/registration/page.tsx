@@ -35,7 +35,7 @@ export default function Registration() {
       });
       const result = await response.json();
       setIsExploding(true);
-      await delay(1500);
+      await delay(500);
       setIsExploding(false);
 
       const age = parseInt(formData.age);
