@@ -6,7 +6,7 @@ export default function ConfirmationChild() {
     <div className="relative w-screen h-screen">
       <Image
         alt="background"
-        src="/background2.0.png"
+        src="/background.png"
         layout="fill"
         objectFit="cover"
         quality={100}
