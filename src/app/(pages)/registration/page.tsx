@@ -15,7 +15,7 @@ export default function Registration() {
     lastName: "",
     phone: "",
     age: "",
-  });
+  } as { [key: string]: string });
 
   const handleChange = (e: any) => {
     const { name, value } = e.target;
@@ -29,11 +29,21 @@ export default function Registration() {
     e.preventDefault();
 
     const requiredFields = ["firstName", "lastName", "phone", "age"];
+    const fieldNamesInPortuguese: { [key: string]: string } = {
+      firstName: "Nome",
+      lastName: "Sobrenome",
+      phone: "Telefone",
+      age: "Idade",
+    };
     const missingFields = requiredFields.filter((field) => !formData[field]);
 
     if (missingFields.length > 0) {
+      const missingFieldsInPortuguese = missingFields.map(
+        (field) => fieldNamesInPortuguese[field]
+      );
+
       alert(
-        `Por favor, preencha todos os campos obrigatórios: ${missingFields.join(
+        `Por favor, preencha todos os campos obrigatórios: ${missingFieldsInPortuguese.join(
           ", "
         )}`
       );
