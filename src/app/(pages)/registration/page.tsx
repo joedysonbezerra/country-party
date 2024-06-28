@@ -8,7 +8,9 @@ import { delay } from "@/app/utils/delay";
 export default function Registration() {
   const router = useRouter();
   const [isExploding, setIsExploding] = useState(false);
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<{
+    [key: string]: string;
+  }>({
     firstName: "",
     lastName: "",
     phone: "",
@@ -25,6 +27,19 @@ export default function Registration() {
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
+
+    const requiredFields = ["firstName", "lastName", "phone", "age"];
+    const missingFields = requiredFields.filter((field) => !formData[field]);
+
+    if (missingFields.length > 0) {
+      alert(
+        `Por favor, preencha todos os campos obrigatórios: ${missingFields.join(
+          ", "
+        )}`
+      );
+      return;
+    }
+
     try {
       const response = await fetch("/api/notion/send", {
         method: "POST",
@@ -33,7 +48,7 @@ export default function Registration() {
         },
         body: JSON.stringify(formData),
       });
-      const result = await response.json();
+      await response.json();
       setIsExploding(true);
       await delay(500);
       setIsExploding(false);
@@ -71,7 +86,7 @@ export default function Registration() {
                     htmlFor="first-name"
                     className="block text-sm font-medium leading-6 text-gray-800"
                   >
-                    Primeiro nome
+                    Primeiro nome(Obrigatório)
                   </label>
                   <div className="mt-2">
                     <input
@@ -91,7 +106,7 @@ export default function Registration() {
                     htmlFor="last-name"
                     className="block text-sm font-medium leading-6 text-gray-800"
                   >
-                    Sobrenome
+                    Sobrenome(Obrigatório)
                   </label>
                   <div className="mt-2">
                     <input
@@ -111,7 +126,7 @@ export default function Registration() {
                     htmlFor="phone"
                     className="block text-sm font-medium leading-6 text-gray-800"
                   >
-                    Telefone
+                    Telefone(Obrigatório)
                   </label>
                   <div className="mt-2">
                     <InputMask
@@ -131,7 +146,7 @@ export default function Registration() {
                     htmlFor="age"
                     className="block text-sm font-medium leading-6 text-gray-800"
                   >
-                    Idade
+                    Idade(Obrigatório)
                   </label>
                   <div className="mt-2">
                     <input
