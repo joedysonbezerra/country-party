@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { SEO } from "./SEO";
 import "./globals.css";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -35,8 +36,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="pt-br">
       <body className={inter.className}>{children}</body>
+      <GoogleTagManager gtmId={"GTM-PQZ62N82"} />
     </html>
   );
 }
