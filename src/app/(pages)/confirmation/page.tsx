@@ -15,7 +15,7 @@ export default function ConfirmationChild() {
         <div className="w-screen md:w-[800px]">
           <Image
             alt="header logo"
-            src="/header.png"
+            src="/header2.0.png"
             layout="responsive"
             width={1500}
             height={200}
