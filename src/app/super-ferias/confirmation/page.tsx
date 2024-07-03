@@ -33,7 +33,7 @@ export default function ConfirmationChild() {
                   <p className="text-base text-gray-500">
                     Copie a <b>Chave PIX</b> abaixo e cole no aplicativo do seu
                     banco. Após finalizar o pagamento, envie o comprovante para
-                    o número <b>81 9700-0458</b>.
+                    o número <b>81 99141-9559</b>.
                   </p>
                 </div>
               </div>
