@@ -1,14 +1,14 @@
 export const SEO = {
-  title: "Lagoinha Caruaru | Festa Country",
-  description: "Faça sua inscrição para a festa country da Lagoinha Caruaru.",
+  title: "Lagoinha Caruaru",
+  description: "Faça sua inscrição para os eventos da Lagoinha Caruaru.",
   keywords: ["igreja", "lagoinha"],
   domain: "https://lagoinhacaruaru.com.br",
   category: "church",
   openGraph: {
-    title: "Lagoinha Caruaru | Festa Country",
-    description: "Faça sua inscrição para a festa country da Lagoinha Caruaru.",
+    title: "Lagoinha Caruaru",
+    description: "Faça sua inscrição para os eventos da Lagoinha Caruaru.",
     url: "https://lagoinhacaruaru.com.br",
-    siteName: "Lagoinha Caruaru | Festa Country",
+    siteName: "Lagoinha Caruaru",
     images: [
       {
         url: "https://lagoinhacaruaru.com.br/open-graph.jpg",
